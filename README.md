@@ -44,7 +44,7 @@ TBD
 ## How to Run
 
 1. **Start PostgreSQL** (Postgres.app, Homebrew, Docker container, whatever)
-2. **Download the CCRS CSVs** for Napa County into `data/`. Download script provided. 
+2. **Download the CCRS CSVs** into `data/`. Download script provided. 
 3. **Install requirements** listed in `requirements.txt`.
 4. **Set database URL** as an environment variable. Example .env provided.
 5. **Open the notebook** and run it top to bottom. Section 2 loads the CSVs into Postgres.
