@@ -1,4 +1,4 @@
-# Napa County Crash Data Analysis
+# Napa County Traffic Collision Data Analysis
 
 A SQL analysis of California Crash Reporting System (CCRS) data for Napa County, using PostgreSQL in a Jupyter notebook.
 
@@ -35,7 +35,7 @@ TBD
 ```
 ├── README.md
 ├── download_ccrs.py            # download CCRS CSVs
-├── napa_crash_analysis.ipynb   # the full analysis
+├── napa_crash_analysis.ipynb   # data validation and EDA
 ├── requirements.txt
 ├── data/                       # directory for raw CSVs (git-ignored)
 └── visualizations/             # exported charts
@@ -47,7 +47,7 @@ TBD
 2. **Download the CCRS CSVs** into `data/`. Download script provided. 
 3. **Install requirements** listed in `requirements.txt`.
 4. **Set database URL** as an environment variable. Example .env provided.
-5. **Open the notebook** and run it top to bottom. Section 2 loads the CSVs into Postgres.
+5. **Open the notebook** and run it top to bottom.
 
 ## Limitations
 
