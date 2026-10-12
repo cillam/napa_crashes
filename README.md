@@ -3,18 +3,14 @@
 A SQL analysis of California Crash Reporting System (CCRS) data for Napa County, using PostgreSQL in a Jupyter notebook.
 
 
-## The Question
+## The Questions
 
 Napa County hosts millions of wine-country visitors a year, many of them driving between tasting rooms on two-lane roads like Highway 29 and the Silverado Trail. This project asks:
 
-**When, where, and under what conditions do crashes happen in Napa County, and how much does alcohol play a role?**
-
 1. What time of day and day of week are crashes most common?
-2. Is there a seasonal pattern, and does harvest season stand out? How have crashes trended year over year?
-3. How often is alcohol involved, and when?
-4. Who is involved in crashes, and who gets hurt?
-5. Which cities and roads have the most crashes?
-6. Which conditions make a crash more likely to be severe?
+2. How have crashes changed year over year?
+3. How often is an impairment such as alcohol involved, and does it peak at certain times or on weekends?
+4. Which roads have the most crashes, and how do Highway 29 and the Silverado Trail compare?
 
 ## Key Findings
 
@@ -26,9 +22,6 @@ TBD
 - **Coverage:** Napa County, 2016–Present
 - Raw CSVs are **not** included in this repo. Download them from the source above and place them in `data/`. Download script provided.
 
-## SQL Techniques Demonstrated
-
-TBD
 
 ## Repo Structure
 
@@ -38,7 +31,7 @@ TBD
 ├── napa_crash_analysis.ipynb   # data validation and EDA
 ├── requirements.txt
 ├── data/                       # directory for raw CSVs (git-ignored)
-└── visualizations/             # exported charts
+└── visualizations/             # exported charts/images
 ```
 
 ## How to Run
@@ -53,20 +46,31 @@ TBD
 
 - **Counts are not risk.** Without traffic-volume data, a busy road will show more crashes even if it is no more dangerous per mile driven.
 - **Reporting** varies across agencies and years.
-- **Coded and missing values** required cleanup decisions, which are documented in the notebook.
+- **Coded, ambiguous, and missing values** required cleanup decisions, which are documented in the notebook.
 - These findings show **associations, not causes**.
 
 ## Next Steps
 
-This notebook is the first stage of a larger Napa County traffic safety project. The cleaned crash tables built here are the foundation for two follow-on pieces of work.
+### More questions for this data
+- **Who is involved, and who gets hurt?** Compare at-fault rates by driver age group, and injury rates for drivers, passengers, pedestrians, and cyclists.
+- **Are older vehicles less safe?** When a crash happens, are people in older vehicles more likely to be seriously hurt? Does seat position or ejection make a difference?
+- **What makes a crash severe?** Compare serious-injury rates by lighting, weather, road surface, and crash type.
+- **Is there a seasonal pattern?** Check whether harvest season (August–October) stands out from the rest of the year.
+- **Where exactly do crashes cluster?** Map crash locations to find hot spots.
+- **Has impaired driving changed over time?** Track the share of crashes involving someone under the influence by year, overall, at night, and on weekend afternoons, to see whether patterns shifted with events like the 2020 traffic drop or the growth of ride-sharing, and whether weekend tasting-hour crashes are rising or falling.
+- - **Is there a seasonal pattern?** Check which months have the most crashes, and whether the holidays or harvest season (August–October) stand out.
+- **Which roads have the most crashes?** Rank roads by crash count, both countywide and within each city, and compare Highway 29 with the Silverado Trail. This first requires standardizing road names: the raw data has over 2,200 spellings (for example, "SR-29," "HWY 29," and "St. Helena Hwy" are all Highway 29), plus ramp descriptions and house numbers. Local roads also need to be identified by city as well as name, since different roads can share a name, while highways should be treated as one road countywide.
 
-### 1. Evaluate pedestrian safety improvements
+
+### Future Work
+
+#### 1. Evaluate pedestrian safety improvements
 Estimate how much each pedestrian safety treatment (high-visibility crosswalks, RRFBs, bulb-outs, median refuges, crossing barriers) changed crashes at its location.
 - **Site inventory:** compile a table of treated sites with treatment type, install dates, and cost, using County and city records, grant filings, and the Napa County and City of Napa Local Roadway Safety Plans.
 - **Spatial matching:** add PostGIS to assign crashes to treated sites by distance, with sensitivity tests at several buffer sizes.
 - **Questions:** Did pedestrian crashes and killed-or-seriously-injured (KSI) crashes fall at treated sites beyond the countywide trend? Which treatments delivered the most reduction per dollar?
 
-### 2. Build a public crash dashboard
+#### 2. Build a public crash dashboard
 A resident-facing web dashboard to explore Napa County crashes by year, place, and type.
 - **Live data:** read CCRS directly from the data.ca.gov API through a small caching layer, so new crashes appear without re-running anything.
 - **Views:** yearly trends, a crash map, KSI hot spots, crash factors, and before-after results for each treated site.
