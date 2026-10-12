@@ -5,7 +5,7 @@ A SQL analysis of California Crash Reporting System (CCRS) data for Napa County,
 
 ## The Questions
 
-Napa County hosts millions of wine-country visitors a year, many of them driving between tasting rooms on two-lane roads like Highway 29 and the Silverado Trail. This project asks:
+This project asks:
 
 1. What time of day and day of week are crashes most common?
 2. How have crashes changed year over year?
@@ -14,7 +14,15 @@ Napa County hosts millions of wine-country visitors a year, many of them driving
 
 ## Key Findings
 
-TBD
+The analysis covers **17,886 crashes in Napa County from January 2016 to early October 2026**.
+
+- **Crash volume follows the daily traffic cycle.** About a third of crashes (5,949) happen between noon and 5 p.m., with the heaviest concentration on weekday afternoons. The 1–5 a.m. window is the quietest, with 1,034 crashes.
+- **Crashes dropped in 2020 and have only slightly picked back up.** Every year since 2021 has come in below the 2016–2019 range.
+- **About 1 in 8 crashes (13.1%) involved someone under the influence**, and 16.1% involved someone who had been drinking. Drug-only cases are under 1%.
+- **Impairment is a late-night problem.** Under 5% of daytime weekday crashes involve someone under the influence. After 9 p.m., that share rises to about 31%, and on weekends between 1 and 5 a.m. it reaches 44.8%.
+- **Wine-tasting hours are not the main risk window.** Weekend afternoons have an impairment share of 9.2%, about double the weekday afternoon rate but below the countywide average.
+
+Because the data has no traffic counts, these are crash counts and shares, not risk rates. See [Limitations](#limitations).
 
 ## Data
 
