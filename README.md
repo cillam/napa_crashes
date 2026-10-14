@@ -10,7 +10,6 @@ This project asks:
 1. What time of day and day of week are crashes most common?
 2. How have crashes changed year over year?
 3. How often is an impairment such as alcohol involved, and does it peak at certain times or on weekends?
-4. Which roads have the most crashes, and how do Highway 29 and the Silverado Trail compare?
 
 ## Key Findings
 
