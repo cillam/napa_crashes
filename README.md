@@ -1,6 +1,7 @@
 # Napa County Traffic Collision Data Analysis
 
 A SQL analysis of California Crash Reporting System (CCRS) data for Napa County, using PostgreSQL in a Jupyter notebook.
+**[View the dashboard →](https://cillam.com/projects/napa-crashes/)** Charts of when crashes happen, yearly totals, impairment, and severity, built from this notebook's results.
 
 
 ## The Questions
