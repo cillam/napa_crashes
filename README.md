@@ -1,8 +1,8 @@
 # Napa County Traffic Collision Data Analysis
 
 A SQL analysis of California Crash Reporting System (CCRS) data for Napa County, using PostgreSQL in a Jupyter notebook.
-**[View the dashboard →](https://cillam.com/projects/napa-crashes/)** Charts of when crashes happen, yearly totals, impairment, and severity, built from this notebook's results.
 
+**[View the dashboard →](https://cillam.com/projects/napa-crashes/)** Charts of when crashes happen, yearly totals, impairment, and severity, built from this notebook's results.
 
 ## The Questions
 
@@ -11,7 +11,6 @@ This project asks:
 1. What time of day and day of week are crashes most common?
 2. How have crashes changed year over year?
 3. How often is an impairment such as alcohol involved, and does it peak at certain times or on weekends?
-4. Which roads have the most crashes, and how do Highway 29 and the Silverado Trail compare?
 
 ## Key Findings
 
